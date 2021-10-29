@@ -23,7 +23,11 @@ variables:
 ##[command]Command-line being run
 ##[endgroup]
 
+
+
 steps:
+- script: 'path is $(Build.ArtifactStagingDirectory)'
+
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
