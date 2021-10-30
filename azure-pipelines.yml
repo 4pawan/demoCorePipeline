@@ -17,7 +17,7 @@ variables:
 name: $(Build.DefinitionName)_$(Build.ArtifactStagingDirectory)
 
 steps:
-- script: echo "The path is $(name)"
+- script: echo "The path is '$(name)'"
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
