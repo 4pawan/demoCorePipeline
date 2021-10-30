@@ -14,12 +14,10 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
-name: $(Build.DefinitionName)_$(Build.ArtifactStagingDirectory)
 
 steps:
-- script: echo '$(name)'
+- script: echo '$(Build.DefinitionName)_$(Build.ArtifactStagingDirectory)'
 - script: echo %name1%
-- script: echo %name%
 
 - task: NuGetToolInstaller@1
 
