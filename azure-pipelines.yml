@@ -14,10 +14,10 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
-name: $(Build.DefinitionName)_$(Build.ArtifactStagingDirectory)
+name: 'The Path is $(Build.DefinitionName)_$(Build.ArtifactStagingDirectory)'
 
 steps:
-- script: echo "The path is '$(name)'"
+- script: echo $(name)
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
