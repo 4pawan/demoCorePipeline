@@ -14,19 +14,10 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
-
-##[group]Beginning of a group
-##[warning]Warning message
-##[error]Error message
-##[section]Start of a section
-##[debug]Debug text
-##[command]Command-line being run
-##[endgroup]
-
-
+name: 'path is $(Build.DefinitionName)_$(Build.ArtifactStagingDirectory)'
 
 steps:
-- script: 'path is $(Build.ArtifactStagingDirectory)'
+- script: $(name)
 
 - task: NuGetToolInstaller@1
 
