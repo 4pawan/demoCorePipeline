@@ -17,8 +17,10 @@ variables:
 name: $(Build.DefinitionName)_$(Build.ArtifactStagingDirectory)
 
 steps:
-- script: '$(name)'
+- script: echo '$(name)'
 - script: echo %name1%
+- script: echo %name%
+
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
